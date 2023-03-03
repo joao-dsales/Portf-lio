@@ -1,0 +1,480 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    /*redefini os padrões do navegador utilizando as configurações acima, tirando margin e padding padrão, e definindo a largura e altura do body como 100%*/
+    scrollbar-width: thin;
+    scroll-behavior: smooth;
+    font-family: 'Press Start 2P', cursive;/*fonte importada*/
+    background-image: linear-gradient(to right, #1c7dff, #0051c4);/*Aqui o background do body foi definido como um gradiente linear azul*/
+}
+/*Configurações de Scrollbar para navegadores que não o firefox*/
+body::-webkit-scrollbar{
+    width: 8px;
+    background-color: #fff;
+}
+
+body::-webkit-scrollbar-thumb{
+    background-color: #949292;
+}
+
+
+/*Aqui estão as definições do header*/
+header{
+    width: 100%;/*Header cobre 100% da largura da tela*/
+    height: 100px;/*Possui altura de 100px*/
+}
+
+.menu{
+    display: flex;/*O menu possui display flex, logo, com os itens sendo flexíveis, se torna possível inserir as configurações de conteúdo justificado e alinhamento destes itens*/
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;/*Lista sem estilo para o nav*/
+}
+
+.sessoes{
+    margin-top: 5vh; /*Margin de 5vw do topo*/
+
+    color: #fff;
+    font-size: 1.3em;/*fonte de tamanho relativo*/
+    cursor: pointer;
+    box-shadow: 0 3px #fff;
+}
+
+.sessoes a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.sessoes a:visited{
+    color: #fff;
+}
+
+.botmenu{
+    display: none;
+}
+.navegacaoresponsiva{
+    display: none;
+}
+.responsivo{
+    display: none;
+}
+
+/*Configurações do main*/
+
+/*Aba de projetos*/
+
+.projetos h2{
+    color: #fff;
+    opacity: 1;
+    font-size: 2em;
+}
+
+.projetos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.container{
+    margin-top: -4vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.container .card{
+    position: relative;
+}
+
+.container .card .face{
+    width: 300px;
+    height: 200px;
+    transition: 0.5s;
+    background-color: #fff;
+    overflow: hidden;
+    border-radius: 2px;
+}
+
+.container .card .face.face1 {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    transform: translateY(200px);
+}
+
+.container .card .face.face1 img{
+    margin: 0 auto;
+}
+
+.container .card:hover .face.face1{
+    transform: translateY(10px);
+}
+
+.container .card .face.face2{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border: 2px solid #f5da55;
+    border-top: none;
+}
+
+.visit a button{
+    padding: 1em;
+    background-color: #0051c4;
+    font-family: inherit;
+    color: #fff;
+    border: 3px solid #f5da55;
+}
+
+.visit{
+    margin-top: 4vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button:hover{
+    animation: pisca 0.8s infinite ease-in-out;
+}
+
+.container .card h4{
+    text-align: center;
+    margin-top: 4vh;
+    color: #fff;
+    font-weight: lighter;
+}
+
+.iconstech{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.container .card .face.face2 .content h5{
+    text-align: center;
+    font-size: 0.8rem;
+    margin-bottom: 3vh;
+    color: #0051c4;
+}
+
+.content p{
+    font-size: 1rem;
+    color: #0051c4;
+    animation: flutuar infinite ease-in-out;
+    text-align: center;
+}
+
+
+/*Área informativa a respeito do desenvolvedor*/
+.aba1{
+    display: block;
+}
+.sobre{
+    display: flex; /*Display definido como flex*/
+    width: 100%;
+    height: 100%;
+    justify-content: space-around;/*Justify-content foi definido como space around para que haja espaçamento entre e fora dos elementos*/
+    align-items: center;/*texto alinhado no centro(vertical)*/
+
+    animation: deslizeinicio 4s ease-in-out;/*animação de slide*/
+}
+
+.fotododev{
+    margin-top: 15vh;/*para forçar a imagem a se centralizar também*/
+    border-radius: 50%;/*Arredondar a foto*/
+}
+
+/*Texto da apresentação*/
+h1{
+    font-size: 2em;
+    color: #fff;
+}
+
+h3{
+    margin-top: 5vh;
+
+    font-size: 0.9em;
+    color: #fff;
+}
+
+h2{
+    color: #0051c4;
+    font-size: 1.2em;
+    text-align: center;
+    margin: 8vh auto;
+}
+/*tela a respeito do dev*/
+.sobremim{
+    background-color: white;
+
+    display: flex;
+    justify-content: space-between;
+
+    margin: 25vh auto;
+    border-radius: 15px;
+    width: 85%;
+    height: 600px;
+}
+/*Nesta área foram definidas duas colunas, estas dividem a área que fala sobre o desenvolvedor, uma senda um currículo resumido e a outra mostrando as tecnologias que o programador está apto à utilizar*/
+.column1{
+    width: 40%;
+    margin: 4vh 2vw;
+}
+
+.column2{
+    width: 40%;
+    margin: 4vh 2vw;
+}
+
+.column2 > .tecs > img{
+    margin-top: 3vh;
+    width: 150px;
+}
+
+#java, #css{
+    width: 100px;
+    height: 150px;
+}
+
+.tecs{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.render{/*para a animação aparecer após a tela ser scrollada, esta classe será adicionada à div ".sobremim", isto será melhor documentado no arquivo javascript*/
+    animation: render 5s ease-in-out;
+}
+
+
+/*Configuração do texto*/
+p{
+    font-size: 0.7em;
+    color: #1c7dff;
+}
+
+span{
+    color:#f5da55;
+}
+
+/*Seção das redes sociais*/
+.midias{  
+    width: 100%;
+    height: 40vh;
+    margin: 30vh auto;
+}
+
+.midias h2{
+    color: #fff;
+    opacity: 1;
+    font-size: 1.4em;
+    text-align: center;
+}
+
+.container_2{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.container_2 a img{
+    transition: all 0.2s;
+}
+
+.container_2 a img:hover{
+    transition: all 0.2s;
+    transform: scale(1.1);
+}
+
+.midias p{
+    color: #fff;
+    opacity: 1;
+    text-align: center;
+}
+
+
+/*Media queries e keyframes*/
+@keyframes deslizeinicio {/*Animação de deslize do site ao abrir*/
+    0%{
+        opacity: 0;/*A div vai de opacidade zero e 40vw à esquerda da posição inicial para opacidade 1 e posição inicial*/
+        transform: translate3d(40vw, 0, 0);
+      }
+      100%{
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+      }
+}
+
+@keyframes render {/*efeito de imagem renderizando ao scrollar o site*/
+    0% { 
+        transform: translate3d(0px, -80vh, 0px);/*A div vai de -80vh da posição inicial para a posição inicial*/
+    }
+    100% { 
+        transform: translate3d(0px, 0px, 0px);
+    }
+    }
+
+@keyframes pisca {/*Animação do botão de visitar site*/
+    0%{
+        background-color: #0051c4;
+    }
+    50%{
+        background-color: #f5da55;
+        color: #0051c4;
+    }
+    100%{
+        background-color: #0051c4;
+    }
+}
+
+@keyframes pisca2 {/*Animação do botão de visitar site*/
+    0%{
+        color: #0051c4;
+    }
+    50%{
+        color: #f5da55;
+    }
+    100%{
+        color: #0051c4;
+    }
+}
+
+/*Responsividade*/
+
+@media (max-width: 900px){
+    .sobre{
+        margin: 15vh auto;
+        display: block;
+        animation: render 2s ease-in;
+        text-align: center;
+    }
+    .sobre h1{
+        font-size: 1.5rem;
+        text-align: center;
+    }
+    .sobre h3{
+        font-size: 0.95rem;
+        text-align: center;
+    }
+    .sobremim{
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 0;
+        padding: 10px;
+    }
+    .column1, .column2, .tecs{
+        width: 100%;
+        
+    }
+    .midias{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .container_2{
+        justify-content: space-between;
+        margin: auto;
+    }
+
+    .midias h2{
+        font-size: 0.95rem;
+    }
+
+    .midias .container_2 img{
+        width: 80%;
+    }
+
+    .midias p {
+        opacity: 1;
+        color: #fff;
+        text-align: center;
+    }
+}
+
+@media (max-width: 600px){
+    .container{
+        display: block;
+    }
+    .container div{
+        margin: 5vh auto;
+    }
+    .container .card .face.face1{
+        transform: translateY(240px);
+    }
+    .navegacao{
+        display: none;
+    }
+
+    #menuresponsivo, .navegacaoresponsiva, .responsivo{
+        display: block;
+    }
+
+    header{
+        position: relative;
+    }
+
+    .botmenu{
+        display: flex;
+        justify-content: center;
+    }
+
+    .botaomenu{
+        width: 10%;
+        z-index: 3;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        cursor: pointer;
+    }
+
+    .navegacaoresponsiva{
+        width: 100%;
+        height: 300px;
+        z-index: 2;
+        background-color: #f5da55;
+        position: absolute;
+        color: #0051c4;
+        transform: translateY(-300px);
+        transition: all 0.4s;
+    }
+
+    .navegacaoresponsiva ul li{
+        margin-top: 8vh;
+        text-align: center;
+        box-shadow: 2px 2px #0051c4;
+    }
+
+    .navegacaoresponsiva ul li a:hover{
+        animation: pisca2 0.6s infinite;
+    }
+
+    .navegacaoresponsiva ul li a{
+        text-decoration: none;
+    }
+
+    .navegacaoresponsiva ul li a:visited{
+        color: #0051c4;
+    }
+
+
+    .deslizar{
+        transform: translateY(0);
+        transition: all 0.4s;
+    }
+}
+

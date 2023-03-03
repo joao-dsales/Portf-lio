@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,700&family=Press+Start+2P&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+    
+    <header>
+        <!--Aqui está marcado o header, contendo o menu de navegação do portifólio que terá três abas sendos estas "Projetos", "Sobre", "Redes sociais"-->
+
+        <nav class="navegacao">
+            <ul class="menu">
+                <li class="sessoes"><a href="#projetos">PROJETOS</a></li>
+                <li class="sessoes"><a href="#sobremim">SOBRE MIM</a></li>
+                <li class="sessoes"><a href="#redesociais">REDES SOCIAIS</a></li>
+            </ul>
+        </nav>
+        <div class="botmenu"><img src="./imagens/menu.png" alt="imagem do menu responsivo" onclick="menuresp()" class="botaomenu"></div>
+        <nav class="navegacaoresponsiva">
+            <ul class="responsivo">
+                <li class="sessoes_resp"><a href="#projetos" onclick="clicaEtira()">PROJETOS</a></li>
+                <li class="sessoes_resp"><a href="#sobremim" onclick="clicaEtira()">SOBRE MIM</a></li>
+                <li class="sessoes_resp"><a href="redesociais" onclick="clicaEtira()">REDES SOCIAIS</a></li>
+            </ul>
+        </nav>
+
+    </header>
+    
+    <main>
+        <!--O main irá conter as três abas do site-->
+
+        
+        <section class="aba1"><!--Esta área é a tela inicial, uma sessão dividida em duas divs-->
+            <section class="sobre">
+                <div class="entrada_texto">
+                    <h1>Olá, me chamo João!</h2>
+                    <h3>Sou técnico em Informática e aspirante a desenvolvedor Front-End</h3>
+                </div>
+                <div class="entrada_foto">
+                    <img src="./imagens/foto.jpg" alt="Foto do desenvolvedor" class="fotododev">
+                </div>
+            </section>
+
+            <div class="sobremim"><!--aqui utilizei da mesma lógica para marcar as áreas, neste caso, denominei colunas as áreas dentro desta div que tem como função ser um currículo resumido-->
+                <div class="column1"><!---->
+                    <h2><a name="sobremim">Quem sou eu?</a></h2>
+                    <p>Aluno do quarto ano do curso técnico integrado de informática no IFRN Parnamirim.</p>
+                    <p>Comecei dentro do IFRN a estudar programação e acabei me apaixonando pela área, atualmente estou estudando desenvolvimento Back-End com <span>Java</span> e o framework <span>React.JS</span> para a área de Front-End.</p>
+
+                    <h2>Objetivos</h2>
+                    <p>Desejo me desenvolver cada vez mais como programador, enquanto aprimoro minhas habilidades e capacidades. No momento busco estágio na área de desenvolvimento!</p>
+
+                </div>
+
+                <div class="column2"><!--Esta coluna indica as tecnologias que conheço e sei utilizar(ao menos de forma básica)-->
+                    <h2>Técnologias</h2>
+                    <div class="tecs">
+                        <img src="./imagens/Javascript-shield.png" alt="Javascript">
+                        <img src="./imagens/1452px-CSS3_logo_and_wordmark.svg.png" alt="CSS3" id="css">
+                        <img src="./imagens/HTML5_logo_and_wordmark.svg.png" alt="HTML5">
+                        <img src="./imagens/Python-logo-notext.svg.png" alt="Python" id="py">
+                        <img src="./imagens/1200px-Java_programming_language_logo.svg.png" alt="Java" id="java">
+                    </div>
+                </div>
+            </div>
+            <script src="./aboutme.js"></script>
+        </section>
+
+        <section class="projetos"><!--Este sistema de cards foi feito através de uma video-aula do canal "devschool"-->
+            <h2><a name="projetos">Projetos</a></h2>
+            <div class="container">
+                <div class="card">
+                    <div class="face face1">
+                        <div class="content"><img src="./capaprojetos/Starbucks.jpg" alt="capa do projeto starbucks"></div>
+                    </div>
+                    <div class="face face2">
+                        <div class="content">
+                            <div class="iconstech">
+                                <h5>Tecnologias utilizadas:</h5>
+                                <img src="./iconstecnologias/js.png" alt="js icon"><img src="./iconstecnologias/css-3.png" alt="css icon"><img src="./iconstecnologias/html5.png" alt="html icon"></div>
+                            <div class="visit"><a href="https://joao-dsales.github.io/StarbucksClone/" target="_blank"><button>Visite o site</button></a></div>
+                        </div>
+                    </div>
+                    <h4>Clone Starbucks</h4>
+                </div>
+    
+                <div class="card">
+                    <div class="face face1">
+                        <div class="content"><p>Em breve</p></div>
+                    </div>
+                    <div class="face face2">
+                        <div class="content"><p>Ainda nada por aqui...</p></div>
+                    </div>
+                </div>
+    
+                <div class="card">
+                    <div class="face face1">
+                        <div class="content"><p>Em breve</p></div>
+                    </div>
+                    <div class="face face2">
+                        <div class="content"><p>Ainda nada por aqui...</p></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+        <section class="midias">
+            <h2><a name="redesociais">Redes sociais e meios de contato:</a></h2>
+            <div class="container_2">
+                <a href="https://www.instagram.com/joaodantassales/" target="_blank"><img src="./imagens/instagram.png" alt="ícone de instagram"></a>
+                <a href="https://github.com/joao-dsales" target="_blank"><img src="./imagens/github.png" alt="ícone do github"></a>
+                <a href="https://twitter.com/salesdjoao" target="_blank"><img src="./imagens/twitter.png" alt="ícone do twitter"></a>
+            </div>
+            <p>endereço de email: sales.d.joao@gmail.com</p>
+        </section>
+
+    </main>
+    <script src="./sections.js"></script>
+</body>
+</html>
